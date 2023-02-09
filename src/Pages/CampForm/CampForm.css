@@ -1,0 +1,29 @@
+
+  .Polaris-Stack{
+    align-items: stretch;
+    justify-content: space-between;
+  }
+.Polaris-Stack>.Polaris-Stack__Item>.card_h1{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.flex-A{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.flex-C{
+position:inherit;
+justify-content: center;
+align-items: center;
+margin-left:8%;
+}
+.flex-D{
+  width:90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+.App>.App-h1{
+  padding-bottom: 8%;
+}
