@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { FormProvider } from '../FormContext/form.context';
+import FormContext from '../FormContext/form.context';
 import {
     Card,
+    Form,
+    FormLayout,
     Stack,
     Button,
     Collapsible,
@@ -13,12 +17,13 @@ import {useState, useCallback} from 'react';
 import CampForm from '../CampForm/CampForm';
   import "./App_provider.css"
 function App_provider(props) {
-    const [open, setOpen] = useState(false);
+    // const [open, setOpen] = useState(false);
+    const {open, setOpen} = useContext(FormContext);
     var but1="Create Campaigns";
-    var but2="Campaigns";
+    var but2="Close";
     const handleToggle = useCallback(() => setOpen((open) => !open), []);
     return (
-        <div>
+        <div >
             <AppProvider i18n={enTranslations}>
             <Page>
                 
@@ -40,8 +45,11 @@ function App_provider(props) {
               id="basic-collapsible"
               transition={{duration: '500ms', timingFunction: 'ease-in-out'}}
               expandOnPrint
-            >
+            ><FormProvider>
+
                 <CampForm/>
+
+              </FormProvider>
             </Collapsible>
             </Stack>
                 </Card>

@@ -1,0 +1,11 @@
+.page2-root{
+    width:50%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:2%;
+}
+.heading-h1{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
